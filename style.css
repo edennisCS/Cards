@@ -1,0 +1,72 @@
+
+.content {
+    background-attachment: fixed;
+    background-image: url("world.png");
+    height: 100vmin;
+    width: 100vmax;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1 {
+    color: dodgerblue;
+    margin: 0 auto;
+    padding: 40px ;
+    text-align: center;
+    text-shadow: 2px 0 3px cadetblue;
+    width: 30%;
+    font-family: 'Andika New Basic', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: fit-content;
+    margin: auto;
+    grid-gap: 50px;
+    text-align: center;
+    overflow: hidden;
+    grid-auto-flow: row;
+}
+
+
+.container .card:hover {
+    transform: rotateY(180deg);
+}
+
+.card {
+    height: 200px;
+    margin: 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s linear;
+    width: 200px;
+}
+
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    border-radius: 15px;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    font-family: 'Andika New Basic', sans-serif;
+}
+
+.front{
+    z-index: 2;
+    backface-visibility: hidden;
+    background: linear-gradient(aquamarine,blue);
+
+}
+
+.back{
+    background: linear-gradient(yellow,mediumvioletred);
+    z-index:1;
+    transform: rotateY(180deg);
+
